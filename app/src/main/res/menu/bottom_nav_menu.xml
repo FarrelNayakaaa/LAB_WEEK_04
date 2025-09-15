@@ -4,7 +4,7 @@
         android:icon="@drawable/coffee_menu"
         android:title="@string/bottom_menu_coffee" />
     <item
-        android:id="@+id/cafeFragment"
+        android:id="@+id/viewPagerFragment"
         android:icon="@drawable/cafe_menu"
         android:title="@string/bottom_menu_cafe" />
 </menu>

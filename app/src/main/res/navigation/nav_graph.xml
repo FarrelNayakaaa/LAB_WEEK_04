@@ -32,4 +32,9 @@
         android:name="com.example.lab_week_04.CafeFragment"
         android:label="Cafe List"
         tools:layout="@layout/fragment_cafe" />
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="com.example.lab_week_04.ViewPagerFragment"
+        android:label="@string/bottom_menu_cafe"
+        tools:layout="@layout/fragment_viewpager" />
 </navigation>

@@ -28,17 +28,23 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.listFragment, R.id.favoritesFragment, R.id.cafeFragment), // tambahin CafeFragment
+            setOf(
+                R.id.listFragment,
+                R.id.favoritesFragment,
+                R.id.viewPagerFragment   // tambahkan ini supaya toolbar judul benar
+            ),
             drawerLayout
         )
 
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+        // Side Navigation (Drawer)
         findViewById<NavigationView>(R.id.nav_view)
             .setupWithNavController(navController)
 
-        // ✅ ini harus ada di dalam onCreate
-        val bottomNavView: BottomNavigationView = findViewById(R.id.bottom_nav_view)
-        bottomNavView.setupWithNavController(navController)
+        // Bottom Navigation
+        findViewById<BottomNavigationView>(R.id.bottom_nav_view)
+            .setupWithNavController(navController)
     }
 
     override fun onSupportNavigateUp(): Boolean {
