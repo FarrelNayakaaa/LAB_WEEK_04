@@ -24,7 +24,7 @@ class ViewPagerFragment : Fragment() {
         val viewPager: ViewPager2 = view.findViewById(R.id.view_pager)
         val tabLayout: TabLayout = view.findViewById(R.id.tab_layout)
 
-        val adapter = ViewPagerAdapter(requireActivity())
+        val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
 
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
